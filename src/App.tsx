@@ -45,7 +45,7 @@ function App() {
 					<MenuIcon sx={{ fontSize: "2rem" }} />
 				</IconButton>
 			</Box>
-
+			<h1>test</h1>
 			<Box sx={{ pt: "4rem" }}>
 				<Routes>
 					<Route
