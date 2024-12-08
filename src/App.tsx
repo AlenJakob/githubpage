@@ -1,6 +1,6 @@
 import "./App.css";
 import { Box, Button, Stack, Typography } from "@mui/material";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -44,7 +44,7 @@ function App() {
 								},
 							},
 						}}>
-						<Button component={Link} to="/oferta">
+						<Button component={Link} to="/">
 							Oferta
 						</Button>
 						<Button component={Link} to="/ofirmie">
@@ -62,8 +62,12 @@ function App() {
 				<Box sx={{ flex: 1 }}>
 					{/* <Hero /> */}
 					<Routes>
+						<Route
+							path="/"
+							element={<Navigate to="/offer" replace />}
+						/>
+						<Route path="/offer" element={<Offer />} />
 						<Route path="/ofirmie" element={<About />} />
-						<Route path="/oferta" element={<Offer />} />
 						<Route path="/realizacje" element={<Portfolio />} />
 						<Route path="/kontakt" element={<Contact />} />
 					</Routes>

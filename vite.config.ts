@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 
-export const baseUrl = "/rojalbud/";
+export const baseUrl = "/rojalbud";
 
 // https://vite.dev/config/
 export default defineConfig({
