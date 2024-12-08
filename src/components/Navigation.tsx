@@ -20,7 +20,7 @@ const Navigation = ({ isOpen, toggleDrawer }: NavigationProps) => {
 			sx={{ flex: 1 }}
 			anchor="left"
 			open={isOpen}
-			onClose={toggleDrawer(false)}>
+			onClose={toggleDrawer}>
 			<Box
 				sx={{
 					width: "240px",
