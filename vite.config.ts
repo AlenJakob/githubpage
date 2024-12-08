@@ -5,7 +5,7 @@ export const baseUrl = "/rojalbud";
 
 // https://vite.dev/config/
 export default defineConfig({
-	base: baseUrl,
+	base: "/",
 	plugins: [react()],
 	optimizeDeps: {
 		include: ["@emotion/styled"],
