@@ -12,11 +12,10 @@ function Hero() {
 				sx={{
 					position: "relative",
 					width: "100%",
-					height: { xs: "250px", sm: "300px", md: "400px" },
+					height: { xs: "250px", sm: "300px", md: "300px" },
 					backgroundImage: "url(./example.jpg)",
 					backgroundSize: "cover",
 					backgroundPosition: "center",
-					backgroundAttachment: "fixed",
 					overflow: "hidden",
 				}}>
 				<Box
@@ -51,8 +50,10 @@ function Hero() {
 								md: "3rem",
 							},
 						}}>
-						Profesjonalne wykonczenia wnętrz, Prace ogólno
-						budowlane, Montaż
+						Profesjonalne&nbsp;wykonczenia&nbsp;wnętrz <br />
+						Prace ogólnobudowlane&nbsp;
+						<br />
+						Montaż
 					</Typography>
 
 					<Stack

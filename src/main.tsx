@@ -9,6 +9,9 @@ import { blue } from "@mui/material/colors";
 
 const theme = createTheme({
 	spacing: 8,
+	typography: {
+		fontFamily: '"Lato", serif',
+	},
 	palette: {
 		primary: {
 			light: blue[300],

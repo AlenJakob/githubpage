@@ -12,68 +12,62 @@ import ContactBar from "./components/ContactBar";
 function App() {
 	return (
 		<Box>
-			<Box sx={{ position: "fixed", zIndex: 100, width: "100%", top: 0 }}>
-				<ContactBar />
+			<ContactBar />
+			<Box
+				sx={{
+					top: 0,
+					display: "flex",
+					height: "calc(100vh - 40px)",
+				}}>
 				<Stack
-					direction={{ xs: "column", md: "row" }}
+					direction="column"
 					sx={{
+						alignItems: "flex-start",
 						background: "#1c3a62",
-						px: 2,
-						py: 1,
 						gap: 2,
-						justifyContent: "space-between",
-						alignItems: "center",
+						p: 4,
 					}}>
-					<Typography variant="h5">ROJALBUD</Typography>
-					<Box sx={{ display: "flex", gap: 2 }}>
-						<Button
-							sx={{ background: "#325685" }}
-							variant="outlined"
-							component={Link}
-							to="/">
-							Home
-						</Button>
-						<Button
-							sx={{ background: "#325685" }}
-							variant="outlined"
-							component={Link}
-							to="/ofirmie">
-							O firmie
-						</Button>
-						<Button
-							sx={{ background: "#325685" }}
-							variant="outlined"
-							component={Link}
-							to="/oferta">
+					<Box sx={{ py: 2 }}>
+						<Typography variant="h5">ROJALBUD</Typography>
+					</Box>
+					<Box
+						sx={{
+							display: "flex",
+							gap: 2,
+							flexDirection: "column",
+							".MuiButtonBase-root": {
+								justifyContent: "left",
+								fontSize: { xs: 16, xl: 20 },
+								border: "1px solid transparent",
+								":hover": {
+									border: "1px solid #2c5791",
+								},
+							},
+						}}>
+						<Button component={Link} to="/oferta">
 							Oferta
 						</Button>
-						<Button
-							sx={{ background: "#325685" }}
-							variant="outlined"
-							component={Link}
-							to="/realizacje">
+						<Button component={Link} to="/ofirmie">
+							O firmie
+						</Button>
+						<Button component={Link} to="/realizacje">
 							Realizacje
 						</Button>
-						<Button
-							sx={{ background: "#325685" }}
-							variant="outlined"
-							component={Link}
-							to="/kontakt">
+						<Button component={Link} to="/kontakt">
 							Kontakt
 						</Button>
 					</Box>
 				</Stack>
-			</Box>
 
-			<Box sx={{ pt: 12 }}>
-				<Hero />
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/ofirmie" element={<About />} />
-					<Route path="/oferta" element={<Offer />} />
-					<Route path="/realizacje" element={<Portfolio />} />
-					<Route path="/kontakt" element={<Contact />} />
-				</Routes>
+				<Box sx={{ flex: 1 }}>
+					{/* <Hero /> */}
+					<Routes>
+						<Route path="/ofirmie" element={<About />} />
+						<Route path="/oferta" element={<Offer />} />
+						<Route path="/realizacje" element={<Portfolio />} />
+						<Route path="/kontakt" element={<Contact />} />
+					</Routes>
+				</Box>
 			</Box>
 		</Box>
 	);
