@@ -1,6 +1,6 @@
 import "./App.css";
 import { Box, IconButton, useTheme } from "@mui/material";
-import { Link, Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Offer from "./pages/Offer";
@@ -13,16 +13,10 @@ import { useState } from "react";
 function App() {
 	const theme = useTheme();
 	const isMobile = theme.breakpoints.down("sm");
-	const [isOpen, setIsOpen] = useState(true);
+	const [isOpen, setIsOpen] = useState(false); // Stan początkowy ustawiony na false, żeby menu było zamknięte
 
-	const toggleDrawer = (open) => (event) => {
-		if (
-			event.type === "keydown" &&
-			(event.key === "Tab" || event.key === "Shift")
-		) {
-			return;
-		}
-		setIsOpen(open);
+	const toggleDrawer = () => {
+		setIsOpen((prev) => !prev); // Przełączanie stanu otwarcia/ zamknięcia Drawer
 	};
 
 	return (
@@ -34,9 +28,7 @@ function App() {
 			}}>
 			<Box
 				sx={{
-					width: isOpen ? "200px" : "0",
 					transition: "width 0.3s ease",
-					position: "fixed",
 					zIndex: 1,
 					height: "100%",
 				}}>
@@ -52,7 +44,7 @@ function App() {
 				<IconButton
 					color="inherit"
 					aria-label="menu"
-					onClick={toggleDrawer(true)}
+					onClick={toggleDrawer}
 					sx={{ color: "#fff" }}>
 					<MenuIcon sx={{ fontSize: "2rem" }} />
 				</IconButton>

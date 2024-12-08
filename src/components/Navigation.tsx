@@ -3,15 +3,11 @@ import {
 	Button,
 	Stack,
 	Typography,
-	useTheme,
-	useMediaQuery,
 	IconButton,
 	Drawer,
 } from "@mui/material";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
-import MenuIcon from "@mui/icons-material/Menu";
 
 interface NavigationProps {
 	isOpen: boolean;
@@ -19,7 +15,6 @@ interface NavigationProps {
 }
 
 const Navigation = ({ isOpen, toggleDrawer }: NavigationProps) => {
-	const theme = useTheme();
 	return (
 		<Drawer
 			sx={{ flex: 1 }}
@@ -28,7 +23,7 @@ const Navigation = ({ isOpen, toggleDrawer }: NavigationProps) => {
 			onClose={toggleDrawer(false)}>
 			<Box
 				sx={{
-					width: 230,
+					width: "240px",
 					flexDirection: "column",
 					background: "#1c3a62",
 					gap: 2,
@@ -51,7 +46,7 @@ const Navigation = ({ isOpen, toggleDrawer }: NavigationProps) => {
 					<IconButton
 						color="inherit"
 						aria-label="menu"
-						onClick={toggleDrawer(false)}
+						onClick={toggleDrawer}
 						sx={{
 							width: 40,
 							height: 40,
