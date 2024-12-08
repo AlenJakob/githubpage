@@ -14,7 +14,7 @@ const offerList = [
 		title: "Montaż paneli podłogowych",
 		content:
 			"Precyzyjne układanie paneli, które podkreślą charakter każdego wnętrza. Gwarantuję trwałość i estetykę wykonania.",
-		img: "https://sklep.travicom.pl/img/cms/karta-produktu/panele-winylowe-d2d-winyltechlabel/poradnik-ukladanie-paneli.jpg",
+		img: "https://media.istockphoto.com/id/1130316603/pl/zdj%C4%99cie/remont-domu-ze-zmian%C4%85-pod%C5%82ogi-z-dywan%C3%B3w-na-soli.jpg?s=1024x1024&w=is&k=20&c=WUiXwmHcLJ4xCfiR7aTXJPhXC3Ln2wK8AlDLRLoJzfI=",
 	},
 	{
 		title: "Szpachlowanie i gładzie",
