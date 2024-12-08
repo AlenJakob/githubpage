@@ -46,13 +46,18 @@ function App() {
 				</IconButton>
 			</Box>
 
-			<Routes>
-				<Route path="/" element={<Navigate to="/offer" replace />} />
-				<Route path="/offer" element={<Offer />} />
-				<Route path="/ofirmie" element={<About />} />
-				<Route path="/realizacje" element={<Portfolio />} />
-				<Route path="/kontakt" element={<Contact />} />
-			</Routes>
+			<Box sx={{ pt: "4rem" }}>
+				<Routes>
+					<Route
+						path="/"
+						element={<Navigate to="/offer" replace />}
+					/>
+					<Route path="/offer" element={<Offer />} />
+					<Route path="/ofirmie" element={<About />} />
+					<Route path="/realizacje" element={<Portfolio />} />
+					<Route path="/kontakt" element={<Contact />} />
+				</Routes>
+			</Box>
 		</Box>
 	);
 }

@@ -75,16 +75,25 @@ const Navigation = ({ isOpen, toggleDrawer }: NavigationProps) => {
 								},
 							},
 						}}>
-						<Button component={Link} to="/">
+						<Button onClick={toggleDrawer} component={Link} to="/">
 							Oferta
 						</Button>
-						<Button component={Link} to="/ofirmie">
+						<Button
+							onClick={toggleDrawer}
+							component={Link}
+							to="/ofirmie">
 							O firmie
 						</Button>
-						<Button component={Link} to="/realizacje">
+						<Button
+							onClick={toggleDrawer}
+							component={Link}
+							to="/realizacje">
 							Realizacje
 						</Button>
-						<Button component={Link} to="/kontakt">
+						<Button
+							onClick={toggleDrawer}
+							component={Link}
+							to="/kontakt">
 							Kontakt
 						</Button>
 					</Box>
