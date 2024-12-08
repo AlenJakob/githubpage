@@ -12,20 +12,16 @@ import { useState } from "react";
 
 function App() {
 	const theme = useTheme();
-	const isMobile = theme.breakpoints.down("sm");
-	const [isOpen, setIsOpen] = useState(false); // Stan początkowy ustawiony na false, żeby menu było zamknięte
+	const [isOpen, setIsOpen] = useState(false);
 
 	const toggleDrawer = () => {
-		setIsOpen((prev) => !prev); // Przełączanie stanu otwarcia/ zamknięcia Drawer
+		setIsOpen((prev) => !prev);
 	};
 
+	const openDrawer = () => setIsOpen(true);
+
 	return (
-		<Box
-			sx={{
-				display: "flex",
-				height: "100vh",
-				flexDirection: isMobile ? "column" : "row",
-			}}>
+		<Box>
 			<Box
 				sx={{
 					transition: "width 0.3s ease",
@@ -44,29 +40,19 @@ function App() {
 				<IconButton
 					color="inherit"
 					aria-label="menu"
-					onClick={toggleDrawer}
+					onClick={openDrawer}
 					sx={{ color: "#fff" }}>
 					<MenuIcon sx={{ fontSize: "2rem" }} />
 				</IconButton>
 			</Box>
-			<Box
-				sx={{
-					flex: 1,
-					marginLeft: isMobile ? 0 : "250px",
-					padding: theme.spacing(2),
-					transition: "margin-left 0.3s ease",
-				}}>
-				<Routes>
-					<Route
-						path="/"
-						element={<Navigate to="/offer" replace />}
-					/>
-					<Route path="/offer" element={<Offer />} />
-					<Route path="/ofirmie" element={<About />} />
-					<Route path="/realizacje" element={<Portfolio />} />
-					<Route path="/kontakt" element={<Contact />} />
-				</Routes>
-			</Box>
+
+			<Routes>
+				<Route path="/" element={<Navigate to="/offer" replace />} />
+				<Route path="/offer" element={<Offer />} />
+				<Route path="/ofirmie" element={<About />} />
+				<Route path="/realizacje" element={<Portfolio />} />
+				<Route path="/kontakt" element={<Contact />} />
+			</Routes>
 		</Box>
 	);
 }

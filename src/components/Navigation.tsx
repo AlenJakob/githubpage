@@ -25,7 +25,7 @@ const Navigation = ({ isOpen, toggleDrawer }: NavigationProps) => {
 				sx={{
 					width: "240px",
 					flexDirection: "column",
-					background: "#1c3a62",
+					background: "linear-gradient(30deg, #1c3a62, #173d59)",
 					gap: 2,
 					px: 2,
 					height: "100%",
