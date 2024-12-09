@@ -17,7 +17,7 @@ function AboutMeCard() {
 					display: "flex",
 					flexDirection: { xs: "column", md: "row" },
 				}}>
-				<Box sx={{ width: 300 }}>
+				<Box sx={{ width: 240 }}>
 					<img
 						style={{
 							width: "inherit",
@@ -67,7 +67,7 @@ function AboutMeCard() {
 						}}>
 						<Button
 							component={Link}
-							to="/offer"
+							to="/oferta"
 							size="medium"
 							variant="text"
 							sx={{
@@ -79,7 +79,7 @@ function AboutMeCard() {
 
 						<Button
 							component={Link}
-							to="/offer"
+							to="/realizacje"
 							size="medium"
 							variant="text"
 							sx={{
