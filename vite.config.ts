@@ -6,6 +6,10 @@ export const baseUrl = "/rojalbud";
 // https://vite.dev/config/
 export default defineConfig({
 	base: "/",
+	build: {
+		outDir: "dist",
+		assetsDir: "assets",
+	},
 	plugins: [react()],
 	optimizeDeps: {
 		include: ["@emotion/styled"],

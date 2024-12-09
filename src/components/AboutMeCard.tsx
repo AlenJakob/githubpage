@@ -1,11 +1,4 @@
-import {
-	Box,
-	Typography,
-	Card,
-	CardContent,
-	Avatar,
-	Button,
-} from "@mui/material";
+import { Box, Typography, Card, CardContent, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
 function AboutMeCard() {
@@ -22,20 +15,31 @@ function AboutMeCard() {
 			<CardContent
 				sx={{
 					display: "flex",
+					flexDirection: { xs: "column", md: "row" },
 				}}>
-				<Box>
-					<Avatar
+				<Box sx={{ width: 240 }}>
+					<img
+						style={{
+							width: "inherit",
+							borderRadius: 4,
+							boxShadow:
+								"4px 4px 10px 0px rgba(255, 255, 255, 0.1)",
+						}}
 						alt="My Photo"
 						src="./avatar.png"
-						sx={{ width: 90, height: 90 }}
 					/>
 				</Box>
-				<Box>
+				<Box
+					sx={{
+						textAlign: "left",
+						pl: { xs: 0, md: 4 },
+						pt: { xs: 4, md: 0 },
+					}}>
 					<Typography
 						variant="h4"
 						component="div"
 						sx={{ fontWeight: "bold", mb: 1 }}>
-						O mnie
+						O firmie
 					</Typography>
 					<Typography variant="body1" sx={{ mb: 2 }}>
 						Jestem profesjonalistą z 15-letnim doświadczeniem w
@@ -53,19 +57,38 @@ function AboutMeCard() {
 					<Typography variant="body1" sx={{ mb: 2 }}>
 						Zapraszam do zapoznania się ze szczegółami mojej oferty
 						w
+					</Typography>
+					<Box
+						sx={{
+							display: "flex",
+							flexDirection: "column",
+							alignItems: "flex-start",
+							gap: 1,
+						}}>
 						<Button
 							component={Link}
 							to="/oferta"
-							size="small"
+							size="medium"
 							variant="text"
 							sx={{
 								padding: 0,
 								minWidth: "auto",
-								marginLeft: 1,
 							}}>
 							Zobacz ofertę
 						</Button>
-					</Typography>
+
+						<Button
+							component={Link}
+							to="/realizacje"
+							size="medium"
+							variant="text"
+							sx={{
+								padding: 0,
+								minWidth: "auto",
+							}}>
+							Moje realizacje
+						</Button>
+					</Box>
 				</Box>
 			</CardContent>
 		</Card>
