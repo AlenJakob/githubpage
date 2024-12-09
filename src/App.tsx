@@ -4,7 +4,6 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Offer from "./pages/Offer";
 import Portfolio from "./pages/Portfolio";
-import ContactBar from "./components/ContactBar";
 import Layout from "./pages/Layout";
 
 function App() {

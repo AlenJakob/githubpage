@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, useTheme } from "@mui/material";
+import { Box, IconButton, useTheme } from "@mui/material";
 
 import { Outlet } from "react-router-dom";
 import ContactBar from "../components/ContactBar";

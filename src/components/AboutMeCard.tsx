@@ -1,11 +1,4 @@
-import {
-	Box,
-	Typography,
-	Card,
-	CardContent,
-	Avatar,
-	Button,
-} from "@mui/material";
+import { Box, Typography, Card, CardContent, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
 function AboutMeCard() {
