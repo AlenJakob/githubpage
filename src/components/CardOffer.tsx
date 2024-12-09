@@ -13,7 +13,6 @@ const CardOffer = ({ title, content, img }: CardOfferProps) => {
 				minWidth: 275,
 				maxWidth: 380,
 				height: "100%",
-				// background: "rgba(255,255,255,.2)",
 				background: "rgba(28, 58, 98,.2)",
 				border: "1px solid #213650",
 				color: "#fff",
