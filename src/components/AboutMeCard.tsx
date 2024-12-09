@@ -56,7 +56,7 @@ function AboutMeCard() {
 					</Typography>
 					<Typography variant="body1" sx={{ mb: 2 }}>
 						Zapraszam do zapoznania się ze szczegółami mojej oferty
-						w
+						w{" "}
 					</Typography>
 					<Box
 						sx={{
