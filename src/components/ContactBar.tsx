@@ -1,17 +1,18 @@
 import { Box, Link } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
+import { CSSProperties } from "react";
 
-function ContactBar({ center }: { center?: boolean }) {
+function ContactBar({ center, sx }: { center?: boolean; sx: CSSProperties }) {
 	return (
 		<Box
 			sx={{
-				backgroundColor: "#152841",
 				color: "#e2f2ff",
 				padding: "8px 16px",
 				display: "flex",
 				justifyContent: center ? "center" : "space-between",
 				alignItems: "center",
+				...sx,
 			}}>
 			<Box
 				sx={{

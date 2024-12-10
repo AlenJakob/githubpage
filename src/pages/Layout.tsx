@@ -6,16 +6,21 @@ import { useState } from "react";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import Navigation from "../components/Navigation";
+import NavigationMobile from "../components/NavigationMobile";
+import { useMediaQuery } from "@mui/material";
 
 const Layout = () => {
-	const theme = useTheme();
 	const [isOpen, setIsOpen] = useState(false);
+	const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+	const isDesktop = useMediaQuery((theme) => theme.breakpoints.up("md"));
 
+	const theme = useTheme();
 	const toggleDrawer = () => {
 		setIsOpen((prev) => !prev);
 	};
 
 	const openDrawer = () => setIsOpen(true);
+	const customStyles = isDesktop ? { justifyContent: "flex-end" } : {};
 	return (
 		<Box
 			sx={{
@@ -27,33 +32,45 @@ const Layout = () => {
 			<Box>
 				<Box
 					sx={{
-						transition: "width 0.3s ease",
-					}}>
-					<Navigation isOpen={isOpen} toggleDrawer={toggleDrawer} />
-				</Box>
-				<Box
-					sx={{
 						display: "flex",
 						alignItems: "center",
 						justifyContent: "space-between",
-						p: theme.spacing(2),
 						zIndex: 2,
+						width: "100%",
+						backgroundColor: "#152841",
 					}}>
-					<IconButton
-						color="inherit"
-						aria-label="menu"
-						onClick={openDrawer}
-						sx={{
-							color: "#fff",
-							":hover": {
-								background: "#142a47",
-							},
-						}}>
-						<MenuIcon sx={{ fontSize: "2rem" }} />
-					</IconButton>
-					<ContactBar />
+					{!isDesktop && (
+						<IconButton
+							color="inherit"
+							aria-label="menu"
+							onClick={openDrawer}
+							sx={{
+								color: "#fff",
+								":hover": {
+									background: "#142a47",
+								},
+							}}>
+							<MenuIcon sx={{ fontSize: "2rem" }} />
+						</IconButton>
+					)}
+					<ContactBar sx={customStyles} />
 				</Box>
-				<Outlet />
+				<Box
+					sx={{
+						transition: "width 0.3s ease",
+					}}>
+					{isMobile && (
+						<NavigationMobile
+							isOpen={isOpen}
+							toggleDrawer={toggleDrawer}
+						/>
+					)}
+
+					<Box>
+						<Navigation />
+						<Outlet />
+					</Box>
+				</Box>
 			</Box>
 
 			<ContactBar center />

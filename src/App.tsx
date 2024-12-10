@@ -13,9 +13,9 @@ function App() {
 				<Route path="/" element={<Layout />}>
 					<Route
 						path="/"
-						element={<Navigate to="/offer" replace />}
+						element={<Navigate to="/oferta" replace />}
 					/>
-					<Route path="/offer" element={<Offer />} />
+					<Route path="/oferta" element={<Offer />} />
 					<Route path="/ofirmie" element={<About />} />
 					<Route path="/realizacje" element={<Portfolio />} />
 					<Route path="/kontakt" element={<Contact />} />
