@@ -3,7 +3,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import { CSSProperties } from "react";
 
-function ContactBar({ center, sx }: { center?: boolean; sx: CSSProperties }) {
+function ContactBar({ center, sx }: { center?: boolean; sx?: CSSProperties }) {
 	return (
 		<Box
 			sx={{
