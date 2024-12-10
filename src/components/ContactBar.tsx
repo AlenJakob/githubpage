@@ -18,7 +18,7 @@ function ContactBar({ center, sx }: { center?: boolean; sx?: CSSProperties }) {
 				sx={{
 					display: "flex",
 					gap: 2,
-					flexDirection: { xs: "column", md: "row" },
+					width: "100%",
 				}}>
 				<Link
 					href="mailto:example@email.com"
