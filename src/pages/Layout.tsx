@@ -38,7 +38,7 @@ const Layout = () => {
 						width: "100%",
 						backgroundColor: "#152841",
 					}}>
-					{!isDesktop && (
+					{isMobile && (
 						<IconButton
 							color="inherit"
 							aria-label="menu"
@@ -66,7 +66,7 @@ const Layout = () => {
 					)}
 
 					<Box>
-						<Navigation />
+						{!isMobile && <Navigation />}
 						<Outlet />
 					</Box>
 				</Box>
