@@ -1,6 +1,6 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-console.log("TEST ---- 1");
+console.log("TEST ---- 2");
 const Navigation = () => {
 	return (
 		<Box
