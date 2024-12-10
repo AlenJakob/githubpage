@@ -1,16 +1,12 @@
-#!/bin/bash
+echo "VERCEL_GIT_COMMIT_REF: $VERCEL_GIT_COMMIT_REF"
 
-# Logowanie gałęzi
-echo "Branch being deployed: $VERCEL_GIT_COMMIT_REF"
+if [[ "$VERCEL_GIT_COMMIT_REF" == "staging" || "$VERCEL_GIT_COMMIT_REF" == "master"  ]] ; then
+  # Proceed with the build
+    echo "✅ - Build can proceed"
+  exit 1;
 
-# Sprawdzenie, czy gałąź jest "master", jeśli nie to przerywamy proces
-if [[ $VERCEL_GIT_COMMIT_REF != "master" ]]; then
-  echo "Skipping build for non-master branch"
-  exit 0  # Zatrzymanie skryptu dla innych gałęzi
+else
+  # Don't build
+  echo "🛑 - Build cancelled"
+  exit 0;
 fi
-
-# Jeżeli gałąź to "master", kontynuuj build
-echo "Building branch: master"
-
-# Tutaj reszta kroków budowy/deploy
-# np. kompilacja, uruchomienie testów, itd.
