@@ -5,7 +5,6 @@ import {
 	Typography,
 	IconButton,
 	Drawer,
-	useTheme,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
@@ -16,7 +15,6 @@ interface NavigationMobileProps {
 }
 
 const NavigationMobile = ({ isOpen, toggleDrawer }: NavigationMobileProps) => {
-	const theme = useTheme();
 	return (
 		<Drawer
 			sx={{ flex: 1 }}
@@ -50,7 +48,6 @@ const NavigationMobile = ({ isOpen, toggleDrawer }: NavigationMobileProps) => {
 						aria-label="menu"
 						onClick={toggleDrawer}
 						sx={{
-							// p: theme.spacing(2),
 							width: 40,
 							height: 40,
 							color: "#fff",
