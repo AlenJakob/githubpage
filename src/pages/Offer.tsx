@@ -46,7 +46,9 @@ const Offer = () => {
 	return (
 		<Box py={3}>
 			<Box pb={4}>
-				<Typography variant="h4">Zakres usług</Typography>
+				<Typography color="#fff" variant="h4">
+					Zakres usług
+				</Typography>
 			</Box>
 			<Box>
 				<Grid
